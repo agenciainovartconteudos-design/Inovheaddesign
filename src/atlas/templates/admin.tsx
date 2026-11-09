@@ -33,6 +33,19 @@ import {
   useToast,
 } from "../shared/ui";
 export default function Admin({ config }: TemplateProps) {
+  return (
+    <AdminGate config={config}>
+      {({ user, signOut }) => (
+        <AdminDashboard config={config} user={user} signOut={signOut} />
+      )}
+    </AdminGate>
+  );
+}
+function AdminDashboard({
+  config,
+  user,
+  signOut,
+}: TemplateProps & { user: { id: string; email: string; name: string }; signOut: () => void }) {
   const [view, setView] = useState("overview"),
     [users, setUsers] = useState(list(config, "users")),
     [query, setQuery] = useState(""),
@@ -61,7 +74,14 @@ export default function Admin({ config }: TemplateProps) {
     { id: "settings", label: "Configurações", icon: <Settings size={18} /> },
   ];
   return (
-    <AppFrame config={config} nav={nav} active={view} onNav={setView}>
+    <AppFrame
+      config={config}
+      nav={nav}
+      active={view}
+      onNav={setView}
+      user={{ name: user.name, email: user.email }}
+      onSignOut={signOut}
+    >
       <PageHead
         eyebrow="WORKSPACE / OPERAÇÃO"
         title={

@@ -260,6 +260,8 @@ export function AppFrame({
   children,
   actions,
   title,
+  user,
+  onSignOut,
 }: {
   config: TemplateConfig;
   nav: NavItem[];
@@ -268,6 +270,8 @@ export function AppFrame({
   children: React.ReactNode;
   actions?: React.ReactNode;
   title?: string;
+  user?: { name: string; email?: string };
+  onSignOut?: () => void;
 }) {
   const [open, setOpen] = useState(false),
     [notifications, setNotifications] = useState(false);
@@ -309,15 +313,17 @@ export function AppFrame({
           ))}
         </nav>
         <div className="sidebar-bottom">
-          <div className="demo-note">
-            <span className="live-dot" /> Ambiente de demonstração
-            <small>Dados fictícios · alterações locais</small>
-          </div>
           <div className="profile">
-            <Avatar name={config.branding.name} />
+            <Avatar name={user?.name || config.branding.name} />
             <div>
-              {config.branding.name}<small>Seu espaço pessoal</small>
+              {user?.name || config.branding.name}
+              <small>{user?.email || "Seu espaço pessoal"}</small>
             </div>
+            {onSignOut && (
+              <IconButton label="Sair" onClick={onSignOut}>
+                <LogOut size={16} />
+              </IconButton>
+            )}
           </div>
         </div>
       </aside>
