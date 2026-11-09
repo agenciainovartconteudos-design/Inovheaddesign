@@ -24,7 +24,16 @@
     "description": "Tudo o que acontece na sua operação, em um só lugar.",
     "eyebrow": "CONTROLE, COM CLAREZA",
     "cta": "Começar agora",
-    "heroImage": ""
+    "heroImage": "abstract.webp",
+    "heroAlt": "Composição visual representando controle administrativo",
+    "visualBadge": "Acesso restrito da equipe",
+    "visualDescription": "Entre com suas credenciais de administrador para gerenciar usuários, papéis e configurações do workspace.",
+    "visualFooter": "NEXO ADMIN",
+    "loginTitle": "Acesso da equipe administrativa",
+    "registerTitle": "Convidar administrador",
+    "registerDescription": "Cadastre um novo membro para administrar este workspace.",
+    "recoverTitle": "Recupere o acesso administrativo",
+    "recoverDescription": "Informe o e-mail cadastrado para recuperar o acesso ao painel."
   },
   "collections": {
     "users": []

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import type { TemplateProps, Entity } from "../types";
 import { list, makeId } from "../types";
+import { AdminGate } from "../shared/admin-gate";
 import {
   AppFrame,
   PageHead,
