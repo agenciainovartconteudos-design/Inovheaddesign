@@ -314,9 +314,9 @@ export function AppFrame({
             <small>Dados fictícios · alterações locais</small>
           </div>
           <div className="profile">
-            <Avatar name="Marina Costa" />
+            <Avatar name={config.branding.name} />
             <div>
-              Marina Costa<small>Seu espaço pessoal</small>
+              {config.branding.name}<small>Seu espaço pessoal</small>
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@ export function AppFrame({
             >
               <Bell size={18} />
             </IconButton>
-            <Avatar name="Marina Costa" size={31} />
+            <Avatar name={config.branding.name} size={31} />
           </div>
         </header>
         <main className="app-main" id="main">

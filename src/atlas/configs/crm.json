@@ -27,61 +27,6 @@
     "heroImage": ""
   },
   "collections": {
-    "deals": [
-      {
-        "id": "1",
-        "title": "Identidade da Aurora",
-        "person": "Ana Souza",
-        "value": 8400,
-        "status": "Novo contato",
-        "category": "Design",
-        "date": "Hoje"
-      },
-      {
-        "id": "2",
-        "title": "Site da Vale Verde",
-        "person": "Lucas Castro",
-        "value": 12500,
-        "status": "Em conversa",
-        "category": "Website",
-        "date": "Hoje"
-      },
-      {
-        "id": "3",
-        "title": "Campanha Horizonte",
-        "person": "Bia Martins",
-        "value": 18900,
-        "status": "Proposta",
-        "category": "Marketing",
-        "date": "Amanhã"
-      },
-      {
-        "id": "4",
-        "title": "Portal da Norte",
-        "person": "Daniel Reis",
-        "value": 24000,
-        "status": "Negociação",
-        "category": "Produto",
-        "date": "02 out."
-      },
-      {
-        "id": "5",
-        "title": "Marca Lume",
-        "person": "Júlia Melo",
-        "value": 6800,
-        "status": "Ganho",
-        "category": "Design",
-        "date": "28 set."
-      },
-      {
-        "id": "6",
-        "title": "Landing Prisma",
-        "person": "Rui Santos",
-        "value": 4900,
-        "status": "Novo contato",
-        "category": "Website",
-        "date": "03 out."
-      }
-    ]
+    "deals": []
   }
 }
