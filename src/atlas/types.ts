@@ -71,7 +71,8 @@ export const list = (c: TemplateConfig, key = "items"): Entity[] =>
 export const asset = (name: string) =>
   name.startsWith("data:") ||
   name.startsWith("blob:") ||
-  name.startsWith("https://")
+  name.startsWith("https://") ||
+  name.startsWith("/")
     ? name
     : `https://lovekingcode.lovable.app/atlas/${name}`;
 export const makeId = () =>

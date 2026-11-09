@@ -14,6 +14,7 @@ import {
 import type { TemplateProps, Entity } from "../types";
 import { list, makeId } from "../types";
 import { AdminGate } from "../shared/admin-gate";
+import adminHero from "../../assets/admin-login-hero.webp";
 import {
   AppFrame,
   PageHead,
@@ -34,7 +35,7 @@ import {
 } from "../shared/ui";
 export default function Admin({ config }: TemplateProps) {
   return (
-    <AdminGate config={config}>
+    <AdminGate config={config} imageSrc={adminHero}>
       {({ user, signOut }) => (
         <AdminDashboard config={config} user={user} signOut={signOut} />
       )}
